@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Henry Dave Tacuyan - Portfolio
 
-## Getting Started
+## About
+This is my personal portfolio website built with Next.js, TypeScript, and Tailwind CSS. It showcases my projects, skills, and contact information.
 
-First, run the development server:
+## Technologies Used
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- React 18
 
+## Setup Instructions
+
+### Prerequisites
+- Node.js (version 18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/HolySagittarius/tacuyan-my-portfolio.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navigate to project folder
+```bash
+cd tacuyan-my-portfolio
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Install dependencies
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run development server
+```bash
+npm run dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) to view the site
 
-To learn more about Next.js, take a look at the following resources:
+### Build for Production
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
+```
+tacuyan-my-portfolio/
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx      # Root layout with Header & Footer
+│   │   ├── page.tsx        # Homepage with all sections
+│   │   └── globals.css     # Global styles & Tailwind
+│   ├── components/
+│   │   ├── layout/         # Header, Footer, Navigation
+│   │   ├── sections/       # Hero, About, Projects, Contact
+│   │   └── ui/             # Button, Card (reusable)
+│   └── lib/
+│       └── types.ts        # TypeScript interfaces
+├── public/
+│   └── images/             # Profile and project images
+└── package.json
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features
+- ✅ Responsive design (mobile, tablet, desktop)
+- ✅ Smooth scrolling navigation
+- ✅ Contact form with validation
+- ✅ Project cards with GitHub & live demo links
+- ✅ Sticky header with scroll effects
+- ✅ Mobile hamburger menu
+- ✅ TypeScript type safety
+- ✅ Tailwind CSS styling
 
-## Deploy on Vercel
+## Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### UI Components
+- **Button** – Reusable button with primary/outline variants
+- **Card** – Displays project information with image, tech badges, and links
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Layout Components
+- **Navigation** – Sticky header with responsive mobile menu
+- **Footer** – Social links, copyright, and contact email
+
+### Section Components
+- **Hero** – Introduction and call-to-action buttons
+- **About** – Personal bio and skills list
+- **Projects** – Grid layout showing project cards
+- **Contact** – Form with validation and contact info
+
+## Live Demo
+[View Live Portfolio](https://tacuyan-my-portfolio.vercel.app)
+
+## Contact Information
+- **Email:** herohenrydaveb.tacuyan@gmail.com
+- **Phone:** +63 918 681 4217
+- **GitHub:** [@HolySagittarius](https://github.com/HolySagittarius)
+- **Vercel:** [holysagittarius](https://vercel.com/holysagittarius)
+
+## Deployment
+This project is deployed on Vercel. Any push to the main branch automatically triggers a new deployment.
+
+## Credits
+- Built with [Next.js](https://nextjs.org/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Icons from [Heroicons](https://heroicons.com/)
+
+## License
+This project is for educational purposes as part of the Rich Internet Application Development course at Central Philippine University.
