@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-navy: #0a192f;
+  --color-light-navy: #112240;
+  --color-lightest-navy: #233554;
+  --color-slate: #8892b0;
+  --color-light-slate: #a8b2d1;
+  --color-lightest-slate: #ccd6f6;
+  --color-green: #64ffda;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #0a192f;
+    color: #8892b0;
+  }
+  h1, h2, h3 {
+    color: #ccd6f6;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .section-container {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  @media (min-width: 640px) {
+    .section-container {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .section-container {
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
+  }
+  .btn-primary {
+    border: 1px solid #64ffda;
+    color: #64ffda;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    font-family: monospace;
+    font-size: 0.875rem;
+    transition: all 0.3s;
+    display: inline-block;
+    background: transparent;
+  }
+  .btn-primary:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+  }
 }
